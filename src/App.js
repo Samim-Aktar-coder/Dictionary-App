@@ -1,16 +1,13 @@
-import { useEffect } from 'react';
 import './App.css';
-import { fetchFromAPI } from './fetFromAPI';
+import Heading from './components/heading/Heading';
+import Input from './components/input/Input';
 
 function App() {
 
-  useEffect(() => {
-    
-  });
-
   return (
-    <div>
-
+    <div className='main'>
+      <Heading />
+      <Input/>
     </div>
   );
 }
