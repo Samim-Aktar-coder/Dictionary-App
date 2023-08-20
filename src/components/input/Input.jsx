@@ -1,25 +1,20 @@
 import React, { useState } from "react";
 import { BsSearch } from "react-icons/bs";
 import "./input.css";
+import InputState from "./InputState";
 
 export default function Input() {
-  const [word, setWord] = useState({
-    name: "smile",
-  });
+  const [word, setWord] = useState("simple");
+  const [fullWord, setFullWord] = useState("simple");
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setWord(() => {
-      return {
-        [name]: value,
-      };
-    });
+    setWord(e.target.value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(word.name)
-    
+    setFullWord(word);
+    // console.log(fullWord)
   };
 
   return (
@@ -27,9 +22,9 @@ export default function Input() {
       <h2>Write the word you want to know more about</h2>
       <form action='#' onSubmit={handleSubmit} className='input__control'>
         <input
-          type='text'
+          type='search'
           name='name'
-          value={word.name}
+          value={word}
           onChange={handleChange}
           required
         />
@@ -37,6 +32,7 @@ export default function Input() {
           <BsSearch />
         </button>
       </form>
+      <InputState word={fullWord} />
     </div>
   );
 }
