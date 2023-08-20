@@ -1,0 +1,10 @@
+.details-link{
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.details-link:hover{
+    text-decoration: underline;
+}

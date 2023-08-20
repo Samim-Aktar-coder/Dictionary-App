@@ -1,5 +1,43 @@
-.main{
-    border: 1px solid red;
-    width: 85%;
-    margin-inline: auto;
+.main {
+    min-height: 100vh;
+    background: url(./assests/bg-2.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    font-family: var(--font-poppins);
+    position: relative;
 }
+
+.bg-nib {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 44rem;
+    opacity: .5;
+    z-index: 1;
+    pointer-events: none;
+}
+
+
+.container {
+    margin-inline: auto;
+    width: 95%;
+    z-index: 10;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-block: 2rem;
+}
+
+.left{
+    flex-basis: 28%;
+    border: 1px solid crimson;
+}
+
+.right{
+    flex-basis: 70%;
+    border: 1px solid crimson;
+}
+
