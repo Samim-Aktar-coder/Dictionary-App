@@ -11,10 +11,6 @@
     margin-bottom: 1rem;
 }
 
-.pronunciation-info {
-    margin-bottom: 1rem;
-}
-
 .audio-btn {
     cursor: pointer;
     display: inline-flex;
@@ -43,6 +39,7 @@
 }
 
 .pronunciation-info {
+    margin-bottom: 1rem;
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -51,4 +48,10 @@
 .pronunciation-info p {
     font-size: 1.1rem;
     font-weight: 500;
+}
+
+@media screen and (max-width:1022px) and (min-width:950px) {
+    .pronunciation-info {
+        gap: .5rem;
+    }
 }

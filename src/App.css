@@ -44,6 +44,7 @@
 @media screen and (max-width:950px) {
     .container {
         flex-direction: column;
+        gap: 0;
     }
 
     .left,
@@ -63,7 +64,4 @@
         width: 35rem;
     }
 
-    .container {
-        gap: 0rem;
-    }
 }

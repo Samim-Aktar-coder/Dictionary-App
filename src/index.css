@@ -1,13 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Moon+Dance&family=Poppins:wght@400;500;600;700;800&display=swap');
 
 
-:root{
-    --font-poppins:'Poppins',sans-serif;
-    --font-dance:'Moon Dance', cursive;
-    --font-cinzel:'Cinzel',sans-serif;
+:root {
+    --font-poppins: 'Poppins', sans-serif;
+    --font-dance: 'Moon Dance', cursive;
+    --font-cinzel: 'Cinzel', sans-serif;
 
     --primary-color: rgba(218, 204, 177, 0.85);
-    --box-shadow: 7px 7px 7px #3d2713 ;
+    --box-shadow: 7px 7px 7px #3d2713;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 * {
@@ -16,12 +20,12 @@
     box-sizing: border-box;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 10px;
     background: var(--primary-color);
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
     background-color: #3d2713;
     border-radius: 4rem;
 }
