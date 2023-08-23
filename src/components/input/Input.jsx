@@ -1,20 +1,30 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { BsSearch } from "react-icons/bs";
 import "./input.css";
-import InputState from "./InputState";
+import { InputContext } from "./InputProvider";
+import axios from "axios";
 
 export default function Input() {
-  const [word, setWord] = useState("simple");
-  const [fullWord, setFullWord] = useState("simple");
+  const BASE_URL = "https://api.dictionaryapi.dev/api/v2/entries/en";
+
+  const [word, setWord] = useState("smile");
+  const { state, dispatch } = useContext(InputContext);
 
   const handleChange = (e) => {
     setWord(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setFullWord(word);
-    // console.log(fullWord)
+
+    await axios
+      .get(`${BASE_URL}/${word}`)
+      .then((res) => {
+        dispatch({ type: "FETCH_SUCCESS", payload: res.data[0], word: word });
+      })
+      .catch((err) => {
+        dispatch({ type: "FETCH_ERROR" });
+      });
   };
 
   return (
@@ -32,7 +42,7 @@ export default function Input() {
           <BsSearch />
         </button>
       </form>
-      <InputState word={fullWord} />
+      <p className='err-msg'>{state.error ? state.error : ""}</p>
     </div>
   );
 }

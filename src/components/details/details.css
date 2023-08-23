@@ -1,10 +1,22 @@
-.details-link{
+.details-link {
     color: black;
     text-decoration: none;
     font-weight: 500;
     font-size: 1rem;
+    display: inline-block;
+    margin-top: 1.5rem;
 }
 
-.details-link:hover{
+.details-link:hover {
     text-decoration: underline;
+}
+
+@media screen and (max-width:650px) {
+    .details-link {
+        display: block;
+        margin-top: .5rem;
+        text-align: center;
+        width: max-content;
+        margin-inline: auto;
+    }
 }

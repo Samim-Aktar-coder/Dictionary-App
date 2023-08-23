@@ -2,7 +2,6 @@
     background-color: var(--primary-color);
     box-shadow: var(--box-shadow);
     padding: 2rem;
-    margin-top: 1rem;
 }
 
 .sound h2 {
@@ -12,8 +11,11 @@
     margin-bottom: 1rem;
 }
 
+.pronunciation-info {
+    margin-bottom: 1rem;
+}
+
 .audio-btn {
-    border: 1px solid green;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
@@ -30,7 +32,7 @@
 }
 
 
-.audio-btn svg{
+.audio-btn svg {
     font-size: 1.2rem;
 }
 

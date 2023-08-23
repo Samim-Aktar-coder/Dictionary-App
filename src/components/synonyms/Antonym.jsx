@@ -1,19 +1,30 @@
 import React, { useContext } from "react";
-import UserContext from "../input/InputContext";
+import { InputContext } from "../input/InputProvider";
 
 export default function Antonym() {
-  // const word = useContext(UserContext);
-  // console.log(word);
+  const { state } = useContext(InputContext);
+
+  let meanings = state.data.meanings;
+
+  if (meanings) {
+    var antonyms = meanings.map((item) => item.antonyms);
+    var antonymsData = antonyms[0];
+  }
+
 
   return (
-    <div className='word-details'>
-      <h2>Antonyms</h2>
-      <ul className='details synonym'>
-        <li>complex</li>
-        <li>complicated</li>
-        <li>compound</li>
-        <li>gentle</li>
-      </ul>
-    </div>
+    meanings &&
+    (antonymsData.length ? (
+      <div className='word-details'>
+        <h2>Antonyms</h2>
+        <ul className='details synonym'>
+          {antonymsData.map((antonym, index) => (
+            <li key={antonym + index}>{antonym}</li>
+          ))}
+        </ul>
+      </div>
+    ) : (
+      ""
+    ))
   );
 }

@@ -24,7 +24,7 @@
 
 @media screen and (max-width:750px) {
     .heading h1 {
-        font-size: 4.5rem;
+        font-size: 4rem;
         line-height: 4rem;
     }
 
@@ -40,8 +40,23 @@
 
 @media screen and (max-width:470px) {
     .heading h1 {
-        font-size: 4rem;
+        font-size: 3rem;
         line-height: 3.5rem;
+    }
+
+    .heading p {
+        font-size: 1.2rem;
+    }
+
+    .heading img {
+        width: 12rem;
+        margin-top: -2.7rem;
+    }
+}
+@media screen and (max-width:350px) {
+    .heading h1 {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
     }
 
     .heading p {

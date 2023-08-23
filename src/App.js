@@ -3,23 +3,20 @@ import Heading from './components/heading/Heading';
 import Input from './components/input/Input';
 import nib from './assests/nib.png';
 import Sound from './components/sound/Sound';
-import Noun from './components/partsofspeech/Noun';
-import Verb from './components/partsofspeech/Verb';
-import Adjective from './components/partsofspeech/Adjective';
+import PartOfSpeech from './components/partsofspeech/PartsOfSpeech';
 import Synonym from './components/synonyms/Synonym';
 import Antonym from './components/synonyms/Antonym';
 import Details from './components/details/Details';
-import InputState from './components/input/InputState';
+import InputProvider from './components/input/InputProvider';
 
 function App() {
-
   return (
-    <InputState>
+    <InputProvider>
       <div className='main'>
         <img src={nib} alt="nib-bg-img" className='bg-nib' />
+        <Heading />
         <div className="container">
           <div className="left">
-            <Heading />
             <Sound />
             <Synonym />
             <Antonym />
@@ -27,13 +24,11 @@ function App() {
           </div>
           <div className="right">
             <Input />
-            <Noun />
-            <Verb />
-            <Adjective />
+            <PartOfSpeech />
           </div>
         </div>
       </div>
-    </InputState>
+    </InputProvider>
 
   );
 }

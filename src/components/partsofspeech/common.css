@@ -9,15 +9,34 @@
 .word-details h2 {
     font-family: var(--font-cinzel);
     font-weight: 800;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-bottom: 1rem;
 }
 
 .details {
     margin-left: 2rem;
-
 }
 
 .details li {
     font-size: 1.1rem;
+    margin-block: .5rem;
+}
+
+@media screen and (max-width:450px) {
+    .word-details {
+        padding: 1rem;
+    }
+
+    .word-details h2 {
+        font-size: 1.5rem;
+    }
+
+    .details li {
+        font-size: 1.1rem;
+        margin-block: .3rem;
+    }
+
+    .details {
+        margin-left: 1.5rem;
+    }
 }
