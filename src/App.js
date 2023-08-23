@@ -8,6 +8,7 @@ import Synonym from './components/synonyms/Synonym';
 import Antonym from './components/synonyms/Antonym';
 import Details from './components/details/Details';
 import InputProvider from './components/input/InputProvider';
+import Github from './components/heading/Github';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <PartOfSpeech />
           </div>
         </div>
+        <Github />
       </div>
     </InputProvider>
 
