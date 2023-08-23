@@ -6,8 +6,8 @@ import { InputContext } from "../input/InputProvider";
 export default function Sound() {
   const { state } = useContext(InputContext);
 
-  const playAudio = () => {
-    let audio = document.querySelector(".audio-btn audio");
+  const playAudio = (e) => {
+    let audio = e.target.querySelector(".audio-btn audio");
     let src = audio.firstChild.getAttribute("src");
     if (src) {
       audio.play();
@@ -15,6 +15,8 @@ export default function Sound() {
   };
 
   let phoneticsData = state.data.phonetics;
+
+  console.log(phoneticsData);
 
   return (
     phoneticsData && (
