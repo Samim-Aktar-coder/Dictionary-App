@@ -1,6 +1,17 @@
-import React from 'react'
-import './details.css'
+import React, { useContext } from "react";
+import "./details.css";
+import { InputContext } from "../input/InputProvider";
 
 export default function Details() {
-    return <a href='https://en.wiktionary.org/wiki/simple' target='_blank' className='details-link'>More Details</a>;
+  const { state } = useContext(InputContext);
+
+  if (state.data.sourceUrls) {
+    var sourceURL = state.data.sourceUrls[0];
+  }
+
+  return (
+    <a href={sourceURL} target='_blank' className='details-link'>
+      More Details
+    </a>
+  );
 }

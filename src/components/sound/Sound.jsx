@@ -1,30 +1,37 @@
 import React, { useContext } from "react";
 import { AiFillSound } from "react-icons/ai";
 import "./sound.css";
-import InputContext from "../input/InputContext";
+import { InputContext } from "../input/InputProvider";
 
 export default function Sound() {
-  const word = useContext(InputContext);
-
-  console.log(word);
+  const { state } = useContext(InputContext);
 
   const playAudio = () => {
     let audio = document.querySelector(".audio-btn audio");
-    audio.play();
+    let src = audio.firstChild.getAttribute("src");
+    if (src) {
+      audio.play();
+    }
   };
 
+  let phoneticsData = state.data.phonetics;
+
   return (
-    <div className='sound'>
-      <h2>pronunciation</h2>
-      <div className='pronunciation-info'>
-        <div className='audio-btn' onClick={playAudio}>
-          <audio>
-            <source src='https://api.dictionaryapi.dev/media/pronunciations/en/simple-uk.mp3' />
-          </audio>
-          <AiFillSound />
-        </div>
-        <p>/ˈsɪmpəl/</p>
+    phoneticsData && (
+      <div className='sound'>
+        <h2>pronunciation</h2>
+        {phoneticsData.map((item, index) => (
+          <div className='pronunciation-info' key={item.text + index}>
+            <div className='audio-btn' onClick={playAudio}>
+              <audio>
+                <source src={item.audio} />
+              </audio>
+              <AiFillSound />
+            </div>
+            <p>{item.text}</p>
+          </div>
+        ))}
       </div>
-    </div>
+    )
   );
 }
