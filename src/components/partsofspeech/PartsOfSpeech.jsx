@@ -7,7 +7,7 @@ export default function PartOfSpeech() {
 
   let meanings = state.data.meanings;
 
-  console.log(meanings)
+  console.log(meanings);
 
   return (
     meanings && (
@@ -17,9 +17,12 @@ export default function PartOfSpeech() {
             <h2>{item.partOfSpeech}</h2>
             <ul className='details'>
               {item.definitions.map((definition, index) => (
-                <div key={definition.definition + index} className="details-point">
+                <div
+                  key={definition.definition + index}
+                  className='details-point'
+                >
                   <li>{definition.definition}</li>
-                  <p>{definition.example}</p>
+                  {definition.example && <p>Ex- {definition.example}</p>}
                 </div>
               ))}
             </ul>
