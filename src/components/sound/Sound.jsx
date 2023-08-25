@@ -16,8 +16,6 @@ export default function Sound() {
 
   let phoneticsData = state.data.phonetics;
 
-  console.log(phoneticsData);
-
   return (
     phoneticsData && (
       <div className='sound'>
