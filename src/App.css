@@ -1,6 +1,6 @@
 .main {
     min-height: 100vh;
-    background: url(./assests/bg-2.jpg);
+    background: radial-gradient(circle, rgb(255, 228, 179) 0%, rgb(139, 119, 100)  100%);
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
