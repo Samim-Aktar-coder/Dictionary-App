@@ -7,8 +7,6 @@ export default function PartOfSpeech() {
 
   let meanings = state.data.meanings;
 
-  console.log(meanings);
-
   return (
     meanings && (
       <div>
