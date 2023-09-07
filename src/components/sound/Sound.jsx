@@ -21,7 +21,10 @@ export default function Sound() {
       <div className='sound'>
         <h2>pronunciation</h2>
         {phoneticsData.map((item, index) => (
-          <div className='pronunciation-info' key={item.text + index}>
+          <div
+            className='pronunciation-info'
+            key={item.audio || item.text + index}
+          >
             <div className='audio-btn' onClick={playAudio}>
               <audio>
                 <source src={item.audio} />
