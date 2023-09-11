@@ -1,5 +1,3 @@
-# Getting Started with Create React App
-
 [![MasterHead](https://raw.githubusercontent.com/Samim-Aktar-coder/Dictionary-App/main/Github%20Banner.png)](https://dictionexus.netlify.app/)
 
 ### Live: [Click Here](https://dictionexus.netlify.app/)
