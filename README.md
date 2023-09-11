@@ -11,8 +11,10 @@ I created the dictionary app using React JS.
 Tech stack I use to build this app:
 
 - REACT HOOKS
+- REACT ICONS
 - JSX
 - AXIOS
+- API
 - CSS
 
 ## 🙋‍♂️ Author
