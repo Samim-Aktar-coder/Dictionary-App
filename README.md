@@ -24,13 +24,13 @@ Tech stack I use to build this app:
 - First Step
 
 ```bash
-  npm i
+    npm i
 ```
 
 - Second Step
 
 ```bash
-npm run start
+    npm run start
 ```
 
 ## 🔗 Let's Connect
